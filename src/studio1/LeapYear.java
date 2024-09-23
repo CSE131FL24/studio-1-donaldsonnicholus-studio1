@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class LeapYear {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
-		System.out.println("year?");
-		int n1 = in.nextInt();
-		boolean first = n1 % 4 == 0;
-		boolean second = n1 % 100 != 0;
-		boolean third = n1 % 400 == 0;
-		boolean leapYear = (first && second) || (third);
-		System.out.println(leapYear);
+		System.out.println("Enter a year: ");
+		int Year = in.nextInt();
+		
+		boolean IsDivisibleBy4 = Year % 4 == 0;
+		boolean IsNotDivisibleBy100 = Year % 100 != 0;
+		boolean IsDivisibleBy400 = Year % 400 == 0;
+		boolean leapYear = (IsDivisibleBy4 && IsNotDivisibleBy100) || IsDivisibleBy400;
+		System.out.println(Year + " is a leap year: " + leapYear);
 		
 
 	}
